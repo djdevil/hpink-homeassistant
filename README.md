@@ -83,43 +83,83 @@ ENGLISH
 
 # HP Printer Integration Installation and Configuration Guide for Home Assistant
 
-This guide will provide you with the necessary steps to properly install and configure the HP Printer integration in Home Assistant using HACS.
+Make sure you have Home Assistant and HACS properly installed and functioning.
 
-**Prerequisites:**
-- Have Home Assistant and HACS properly installed and functioning.
+1. Visit the GitHub repository page for the HP PRINTER integration at [https://github.com/elad-bar/ha-hpprinter](https://github.com/elad-bar/ha-hpprinter).
 
-1. Visit the GitHub repository page for the HP Printer integration at [https://github.com/elad-bar/ha-hpprinter](https://github.com/elad-bar/ha-hpprinter).
-2. In the "Integrations" tab, search for and install the dependencies "Paper Buttons Row" and "browser mod" following the instructions provided in the repository's documentation.
-3. Install the HP Printer integration through HACS following the instructions provided in the repository's documentation.
-4. Click on the green "Code" button on the repository page and select "Download ZIP" to download the integration's ZIP file.
+2. In the "Integrations" tab, search for and install the dependencies "Paper Buttons Row" and "browser mod". Follow the instructions for installing these dependencies.
+
+3. Install the integration through HACS and configure the printer in your devices.
+
+4. Click on the green "Code" button and select "Download ZIP" to download the integration's ZIP file.
+
 5. Extract the contents of the ZIP file to an easily accessible location on your computer.
-6. You will find a file named `hpink.yaml` within the extracted folder. Copy this file.
-7. Access your Home Assistant server and locate the "packages" folder. It is usually found in the main directory of Home Assistant.
-8. Paste the `hpink.yaml` file into the "packages" folder.
-9. Restart Home Assistant to apply the changes.
-10. Open the Home Assistant interface in your browser and navigate to the frontend page.
-11. In the frontend page, search for the entity named "HP Printer Printer" in the list of available entities. You should see it listed as one of the integrated entities after installing the HP Printer integration through HACS.
-    - **Note:** If you don't see the "HP Printer Printer" entity in the list of entities, make sure you have followed the previous steps correctly and that the integration has been successfully installed.
-12. Once you locate the "HP Printer Printer" entity, click on it and rename it to "sensor.hp_envy_5540_total_pages_printed_xml".
-    - **Note:** Make sure to maintain the structure "sensor.hp_envy_5540_total_pages_printed_xml" to avoid any compatibility issues with the rest of the configuration.
-13. Save the changes and proceed with the other steps mentioned in the guide.
-14. Go back to your HACS installation in Home Assistant.
-15. Create or open the `card.yaml` file in the view where you want to display the HP Printer integration card.
-16. Copy and paste the specified code from the HP Printer repository's `card.yaml` file into your view. Save the file after pasting.
-17. Restart Home Assistant to apply all the changes.
-18. After the restart, you should be able to see the HP Printer integration card in your specified view. Make sure to carefully follow the steps and verify that all dependencies have been properly installed.
+
+6. Within the extracted folder, you will find a file named hpink.yaml. Copy this file.
+
+7. Open the hpink.yaml file and locate the following line of code:
+
+   service: notify.mobile_app_iphonedavide
+   
+   This line of code specifies the default notification service used in the hp printer integration. To replace this notification service with your custom service, follow these steps:
+
+8. Replace notify.mobile_app_iphonedavide with the name of your custom notification service in the following format:
+
+   service: notify.your_notification_service_name
+   
+   Make sure to maintain the structure notify.your_notification_service_name and replace "your_notification_service_name" with the actual name of your notification service.
+
+9. Save the file after making this modification.
+
+10. Access your Home Assistant server and locate the "packages" folder. It is usually located in the main directory of Home Assistant.
+
+11. Paste the hpink.yaml file into the "packages" folder.
+
+12. Restart Home Assistant to apply the changes.
+
+13. After the restart, open the Home Assistant interface in your browser and navigate to the frontend page.
+
+14. In the frontend page, search for the entity named "HP Printer Printer" in the list of available entities. You should see it listed as one of the integrated entities after installing the hp printer integration through HACS.
+
+   Important: If you do not see the "HP Printer Printer" entity in the list of entities, make sure you have followed the previous steps correctly and that the integration has been installed successfully.
+
+15. Once you locate the "HP Printer Printer" entity, click on it and rename it to "sensor.hp_envy_5540_total_pages_printed_xml".
+
+   Note: Make sure to maintain the structure "sensor.hp_envy_5540_total_pages_printed_xml" to avoid any compatibility issues with the rest of the configuration.
+
+16. Save the changes and continue with the other steps mentioned in the guide.
+
+17. Go back to your HACS installation in Home Assistant.
+
+18. Now, create or open the card.yaml file in the view where you want to display the hp printer integration card.
+
+19. Copy and paste the code specified in the hp printer repository's card.yaml file into your view. Save the file after pasting.
+
+20. Restart Home Assistant to apply all the changes.
+
+21. After the restart, you should be able to see the hp printer integration card in your specified view. Make sure to carefully follow the steps and verify that all dependencies have been properly installed.
 
 **Configuration of HP Instant Ink Subscription Renewal Date and Printed Pages Information:**
 
+To configure the HP Instant Ink subscription renewal date and information about printed pages, including additional costs, follow these steps:
+
 1. Make sure you have successfully installed the card in the Home Assistant interface following the previous guide.
-2. In the view where you added the HP Printer integration card, look for the settings icon associated with the card. It is usually represented by a gear-shaped icon or three vertical dots.
-3. Click on the settings icon to open the card's configuration panel.
-4. Inside the configuration panel, you will find options to set the HP Instant Ink subscription renewal date, the number of monthly included pages, the already printed pages, and the extra pages with their respective costs.
-5. Follow the instructions provided in the configuration panel to enter the required information. You may need to enter the dates in the correct format, specify the printed pages, and associated costs6. Be sure to save the changes made in the card's configuration.
 
-Once you have completed these steps, the HP Printer integration card will display the correctly configured information, such as the subscription renewal date, included pages, printed pages, and extra pages with their respective costs. You will be able to view and monitor this information directly in the Home Assistant view.
+2. In the view where you have added the hp printer integration card, look for the settings icon associated with the card. It is usually represented by a gear icon or three vertical dots.
 
-Please note that the configuration options may vary slightly depending on the specific implementation of the HP Printer card you have installed. Make sure to carefully read the instructions provided with the card to achieve a proper configuration.
+3. Click on the settings icon to open the card'sconfiguration panel.
+
+4. Inside the configuration panel, you should find options to set the HP Instant Ink subscription renewal date, the number of monthly included pages, the already printed pages, and extra pages with their respective cost.
+
+5. Follow the instructions provided in the configuration panel to input the required information. You may need to enter dates in the correct format, specify printed pages, and associated costs.
+
+6. Make sure to save the changes made in the card configuration.
+
+Once you have completed these steps, the hp printer integration card will display the correctly configured information, such as the subscription renewal date, included pages, already printed pages, and extra pages with their respective costs. You will be able to view and monitor this information directly in the Home Assistant view.
+
+Please note that the configuration options may slightly vary depending on the specific implementation of the hp printer card you have installed. Make sure to carefully read the instructions provided with the card to achieve proper configuration.
+
+
 
 I hope this guide has been helpful to you! If you have any further questions, feel free to ask.
 
