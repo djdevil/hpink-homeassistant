@@ -1,5 +1,8 @@
 <a href="https://www.buymeacoffee.com/divil17F"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=divil17F&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
 
+![Descrizione immagine](https://ibb.co/k9MVgz0)
+![Descrizione immagine](https://ibb.co/yq2SxYB)
+
 # HP Printer Integration Installation and Configuration Guide for Home Assistant
 
 Assicurati di avere Home Assistant e HACS correttamente installati e funzionanti.
