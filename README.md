@@ -89,6 +89,6 @@ Please note that the configuration options may vary slightly depending on the sp
 
 I hope this guide has been helpful to you! If you have any further questions, feel free to ask.
 
-
+<a href="https://www.buymeacoffee.com/divil17F"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=divil17F&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
 
 
