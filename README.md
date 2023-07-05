@@ -1,5 +1,7 @@
 <a href="https://www.buymeacoffee.com/divil17F"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=divil17F&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
 
+# HP Printer Integration Installation and Configuration Guide for Home Assistant
+
 Assicurati di avere Home Assistant e HACS correttamente installati e funzionanti.
 
 1. Visita la pagina del repository GitHub dell'integrazione HP PRINTER su [https://github.com/elad-bar/ha-hpprinter](https://github.com/elad-bar/ha-hpprinter).
