@@ -1,0 +1,76 @@
+type: vertical-stack
+cards:
+  - type: horizontal-stack
+    cards:
+      - entity: sensor.hp_printer_inkcartridge_black
+        max: 100
+        min: 0
+        name: Cartuccia Nero
+        type: gauge
+        unit: '%'
+      - type: picture-entity
+        entity: sensor.hp_printer_status_card
+        show_name: false
+        show_state: true
+        card_mod: null
+        style: |
+          ha-card {  
+          --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';
+          --ha-card-background: "rgba(0, 0, 0, 0.0)";
+          --ha-card-box-shadow: 'none';
+          bottom: 
+
+            }
+        image: /local/foto-pkg/hp-stampante4.png
+      - entity: sensor.hp_printer_inkcartridge_cyanmagentayellow
+        max: 100
+        min: 0
+        name: Cartuccia Colore
+        type: gauge
+        unit: '%'
+  - entities:
+      - entity: sensor.hp_envy_5540_allowance_days_remaining
+      - entity: sensor.hp_envy_5540_pages_allowance_remaining
+      - entity: sensor.hp_envy_5540_pages_rollover_remaining
+      - entity: sensor.hp_envy_5540_total_free_pages_remaining
+      - entity: sensor.hp_envy_5540_pages_overprint
+      - entity: sensor.hp_envy_5540_pages_overprint_cost
+      - entity: sensor.hp_envy_5540_pages_overprint_remaining
+    title: HP Envy Instant Ink
+    type: entities
+  - type: custom:paper-buttons-row
+    buttons:
+      - icon: hass:cog-outline
+        state: '{{ states(''group.notifiche_lavatrice'') }}'
+        state_styles:
+          'on':
+            icon:
+              color: var(--paper-item-icon-active-color)
+        tap_action:
+          action: fire-dom-event
+          browser_mod:
+            service: browser_mod.popup
+            data:
+              title: Impostazioni
+              style: |
+                --popup-background-color: var(--secondary-background-color);
+                --dialog-backdrop-filter: blur(2em) brightness(0.75);
+              content:
+                cards: null
+                type: entities
+                entities:
+                  - entity: input_datetime.hp_envy_5540_this_period_start_date
+                    name: Data Inizio
+                  - entity: sensor.hp_envy_5540_total_pages_printed
+                    name: Pagine Totali Stampante
+                  - entity: input_number.hp_envy_5540_pages_at_month_start
+                    name: Pagine Totali
+                  - entity: input_number.hp_envy_5540_pages_monthly_allowance
+                  - entity: input_number.hp_envy_5540_pages_rollover_allowance
+                  - entity: >-
+                      input_number.hp_envy_5540_pages_rollover_monthly_max_allowance
+                  - entity: input_number.hp_envy_5540_pages_overprint_block_size
+                  - entity: input_number.hp_envy_5540_pages_overprint_block_cost
+                  - entity: >-
+                      input_number.hp_envy_5540_free_pages_remaining_notification
+                    name: Notifica Esaurimento Pagine
