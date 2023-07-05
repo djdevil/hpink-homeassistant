@@ -2,7 +2,7 @@
 
 # Guida all'installazione e alla configurazione di HP Printer per Home Assistant
 
-Questa guida ti fornirà i passaggi necessari per installare e configurare correttamente l'integrazione HP Printer in Home Assistant utilizzando HACS.
+Questa guida ti fornirà i passaggi necessari per installare e configurare correttamente l'integrazione HP Printer Ink Status in Home Assistant utilizzando HACS.
 
 **Prerequisiti:**
 - Avere Home Assistant e HACS correttamente installati e funzionanti.
