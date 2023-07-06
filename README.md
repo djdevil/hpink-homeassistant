@@ -6,13 +6,13 @@
 
 Assicurati di avere Home Assistant e HACS correttamente installati e funzionanti.
 
-1. Visita la pagina del repository GitHub dell'integrazione HP PRINTER su [https://github.com/elad-bar/ha-hpprinter](https://github.com/elad-bar/ha-hpprinter).
+1. Visita la pagina del repository GitHub dell'integrazione HP PRINTER su [https://github.com/elad-bar/ha-hpprinter](https://github.com/elad-bar/ha-hpprinter). E Installa questa integrazione manualmente o tramit HACS
 
-2. Nella scheda "Integrazioni", cerca e installa le dipendenze "Paper Buttons Row" e "browser mod". Segui le istruzioni per l'installazione di queste dipendenze.
+2. Tramite HACS, cerca e installa le dipendenze Frontend "Paper Buttons Row" e "browser mod". Segui le istruzioni per l'installazione di queste dipendenze.
 
-3. Installa l'integrazione tramite HACS e configura la stampante nei dispositivi.
+3. Una volta installata l'integrazione tramite HACS  configura la stampante nei dispositivi.
 
-4. Fai clic sul pulsante verde "Code" e seleziona "Download ZIP" per scaricare il file ZIP dell'integrazione.
+4. Ora scarica il mio codice seleziona "Download ZIP" per scaricare il file ZIP dell'integrazione.
 
 5. Estrai il contenuto del file ZIP in una posizione facilmente accessibile sul tuo computer.
 
